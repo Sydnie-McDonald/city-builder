@@ -1,10 +1,17 @@
+/* eslint-disable indent */
+
 /* eslint-disable no-unused-vars */
 // import functions and grab DOM elements
 const cityDropdown = document.getElementById('city-dropdown');
+const cityImg = document.getElementById('city-image');
 const styleDropdown = document.getElementById('style-dropdown');
+const styleImg = document.getElementById('style-image');
+const activityDropdown = document.getElementById('activity-dropdown');
+const activityImg = document.getElementById('activity-image');
 
 const cityEl = document.getElementById('city');
 const styleEl = document.getElementById('style');
+const activityEl = document.getElementById('activity');
 const reportEl = document.getElementById('report');
 
 const sloganEl = document.getElementById('slogan');
@@ -14,16 +21,36 @@ const sloganButton = document.getElementById('slogan-button');
 let slogans = [];
 let cityCounter = 0;
 let styleCounter = 0;
+let activityCounter = 0;
+// functions
+function displayStats() {
+
+}
+function displaySlogans() {
+  sloganEl.textContent = sloganInput.value;
+}
 // set event listeners 
 cityDropdown.addEventListener('change', (e) => {
+  reportEl.textContent = ' ';
   const value = e.target.value;
-  cityEl.style.backgroundImage = `url("./assets/${value}-city.png")`;
+  cityCounter++;
+  cityImg.src = `./assets/${value}-city.jpeg`;
   cityCounter++;
 });
 
-/*styleDropdown.addEventListener('change', (e) => {
+styleDropdown.addEventListener('change', (e) => {
   const value = e.target.value;
-  styleEl.style.backgroundImage = `url("./assets/${value}-style.png")`;
+  styleImg.src = `./assets/${value}-style.jpeg`;
   styleCounter++;
-}); 
+});
 
+activityDropdown.addEventListener('change', (e) => {
+  const value = e.target.value;
+  activityImg.src = `./assets/${value}-activity.jpeg`;
+  activityCounter++;
+});
+
+sloganButton.addEventListener('click', (e) => {
+  slogans.push(sloganInput.value);
+  displaySlogans();
+});
