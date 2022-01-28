@@ -26,3 +26,4 @@ cityDropdown.addEventListener('change', (e) => {
   styleEl.style.backgroundImage = `url("./assets/${value}-style.png")`;
   styleCounter++;
 }); 
+
