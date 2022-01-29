@@ -15,63 +15,58 @@
     </head>
 
     <body>
-        <header>
-            <div class="gutter-right logo">
-                <img src="./assets/big-logo.png" />
-            </div>
-        </header>
-        <body>
-            <main>
-                <div class="left">
-                    <div class="picker">
-                        <label>
-                            City 
-                            <select id="city-dropdown">
-                                <option value="seattle">Seattle</option>
-                                <option value="chicago">Chicago</option>
-                                <option value="austin">Austin</option>
-                                <option value="miami">Miami</option>
-                            </select>
-                            <img  id= "city-img" src="">
-                        </label>
-                        <label>
-                            Style
-                            <select id="style-dropdown">
-                                <option value="modern">Modern</option>
-                                <option value="rustic">Rustic Pants</option>
-                                <option value="fancy">Fancy</option>
-                            </select>
-                            <img  id= "style-img" src="">
-                        </label>
-                        <label>
+    <header>
+        <div class="gutter-right logo">
+            <img src="./assets/big-logo.png" />
+        </div>
+    </header>
+    <body>
+        <main>
+            <section>
+                <div class="dropdown" id="city">
+                    City 
+                <select id="city-dropdown">
+                    <option value="seattle">Seattle</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="austin">Austin</option>
+                    <option value="miami">Miami</option>
+                </select>
+                <img  id= "city-img" src="./assets/chicago-city.jpeg">
+                </div>
+                    <div class="dropdown" id="style">
+                        Style
+                        <select id="style-dropdown">
+                            <option value="modern">Modern</option>
+                            <option value="rustic">Rustic Pants</option>
+                            <option value="fancy">Fancy</option>
+                        </select>
+                        <img  id= "style-img" src="./assets/rustic-style.jpeg">
+                    </div>
+                        <div class="dropdown" id="activity">
                             Activity 
-                            <select id="activiy-dropdown">
-                                <option value="seattle">Skydiving</option>
-                                <option value="chicago">Bungee Jumping</option>
-                                <option value="austin">Hockey</option>
-                                <option value="miami">Miami</option>
-                            </select>
-                            <img  id= "activity-img" src="">
-                        </label>
-                        <label>
+                        <select id="activity-dropdown">
+                            <option value="1">Skydiving</option>
+                            <option value="2">Bungee Jumping</option>
+                            <option value="3">Hockey</option>
+                            <option value="4">Ice Skating</option>
+                        </select>
+                        <img  id= "activity-img" src="./assets/skydiving-activity.jpeg">
+                    </div>
+                        <div class="slogan-div" id="slogan-div">
                             Add a slogan
                             <input id="slogan-input" />
                             <button id="slogan-button">Add Slogan</button>
-                        </label>
+                        </div>
                     </div>
-                    <div id="stats">
-                        <p id="report"></p>
-                        <div id="slogan"></div>
-                    </div>
-                </div>
                 <div class="display">
                     <div class="city-display">
                         <div class="bg city" id="city"></div>
                         <div class="bg style" id="style"></div>
                         <div class="bg activity" id="activity"></div>
-                        <div class="slogan" id="slogan"></div>
+                        <div class="slogan" id="slogan-list"></div>
                     </div>
                 </div>
+            </section>
             </main>
         <footer>
             <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>

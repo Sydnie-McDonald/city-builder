@@ -17,6 +17,7 @@ const reportEl = document.getElementById('report');
 const sloganEl = document.getElementById('slogan');
 const sloganInput = document.getElementById('slogan-input');
 const sloganButton = document.getElementById('slogan-button');
+const sloganList = document.getElementById('slogan-list');
 // let state
 let slogans = [];
 let cityCounter = 0;
@@ -27,13 +28,17 @@ function displayStats() {
 
 }
 function displaySlogans() {
-  sloganEl.textContent = sloganInput.value;
+  sloganList.textContent = '';
+  for (let slogan of slogans) {
+    const p = document.createElement('p');
+    p.textContent = slogan;
+    sloganList.append(p);
+  }
 }
 // set event listeners 
 cityDropdown.addEventListener('change', (e) => {
-  reportEl.textContent = ' ';
+  cityEl.textContent = ' ';
   const value = e.target.value;
-  cityCounter++;
   cityImg.src = `./assets/${value}-city.jpeg`;
   cityCounter++;
 });
